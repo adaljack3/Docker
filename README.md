@@ -30,9 +30,27 @@ sudo docker ps  #lista contenedores ACTIVOS
 
 sudo docker ps -a #Lista TODOS los contenerodes en el equipo 
 
+>Eliminar Contenedores 
+
 sudo docker rm    <container_ID>  #elimina el contenedor por ID 
 
 sudo docker rm e78eff455669 38eee5c2a386  #Tambien puede eliminar varios contenedores
+
+sudo docker rm NAME   #Tambien se puede eliminar por nombre
+
+sudo docker rm -f 
+
+sudo rm -f efadb5bdef25  #Fuerza la eliminación de un contenedor que esté en ejecución 
+
+>Eliminar Imagenes
+
+sudo docker images  #Lista las imagenes 
+
+sudo rmi <IMAGE_ID>  #Elimina esa imagen, si hay un contenedor activo con esa imagen no permitirá eliminarla :. Eliminar primero el contenedor 
+
+sudo rmi -f <IMAGE_ID>  #forzar la eliminación de una imagen  , no se pueden eliminar imagenes con un ID duplicado
+
+sudo rmi -f REPOSITORY:TAG  #si exisen varias imagenes con el mismo ID pero con diferente TAG
 
 
 
